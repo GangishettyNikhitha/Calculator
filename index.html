@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Simple Calculator</title>
+     <style>
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgb(145, 2, 145),rgb(208, 26, 166));
+            background-size: 100% 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            position: absolute;
+            top: 150px;
+            left: 450px;
+            background-color:  rgba(0, 0, 0, 0.082);
+            height: 300px;
+            width: 250px;
+            z-index: 1;
+        }
+        form{
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+        input{
+            background-color: rgba(0, 0, 0, 0.578);
+            color: rgb(211, 77, 228);
+            border: none;
+            border-radius: 3px;
+            width: 30px;
+            height: 20px;
+            margin: 4px;
+        }
+        input:hover{
+            background-color: rgb(211, 77, 228);
+            color: black;
+            box-shadow: 2px 2px 5px black;
+        }
+        #text{
+            background-color: rgb(211, 77, 228);
+            color: black;
+            border: none;
+            border-radius: 3px;
+            width: 150px;
+        }
+        #clear{
+            background-color: rgba(0, 0, 0, 0.68);
+            border: none;
+            border-radius: 3px;
+            color: rgb(211, 77, 228) ;
+            width: 70px;
+        }
+        #clear:hover{
+            background-color: rgb(211, 77, 228);
+            color: black;
+            box-shadow: 2px 2px 5px black;
+        }
+        #equal{
+            background-color: rgba(0, 0, 0, 0.68);
+            border: none;
+            border-radius: 3px;
+            color: rgb(211, 77, 228) ;
+            width: 70px;
+        }
+        #equal:hover{
+            background-color: rgb(211, 77, 228);
+            color: black;
+            box-shadow: 2px 2px 5px black;
+        }
+        #calc{
+           margin-top:200px ;
+           margin-left: -130px;
+           font-size: 80px;
+           color: rgb(222, 235, 245);
+           text-shadow: 2px 2px 5px black;
+        }
+        #ulator{
+            margin-top: -144px;
+           font-size: 80px;
+           color: white;
+           z-index: 2;
+           text-shadow: 2px 2px 5px black;
+        }
+
+     </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="calc">calc</h1>
+        <h1 id="ulator">ulator</h1>
+        <form name="cform">
+            <input type="text" name="answer" id="text">
+            <br><br>
+            <input type="button" value="1" onclick="cform.answer.value +='1'">
+            <input type="button" value="2" onclick="cform.answer.value +='2'">
+            <input type="button" value="3" onclick="cform.answer.value +='3'">
+            <input type="button" value="+" onclick="cform.answer.value +='+'">
+            <br><br>
+            <input type="button" value="4" onclick="cform.answer.value +='4'">
+            <input type="button" value="5" onclick="cform.answer.value +='5'">
+            <input type="button" value="6" onclick="cform.answer.value +='6'">
+            <input type="button" value="-" onclick="cform.answer.value +='-'">
+            <br><br>
+            <input type="button" value="7" onclick="cform.answer.value +='7'">
+            <input type="button" value="8" onclick="cform.answer.value +='8'">
+            <input type="button" value="9" onclick="cform.answer.value +='9'">
+            <input type="button" value="*" onclick="cform.answer.value +='*'">
+            <br><br>
+            <input type="button" value="/" onclick="cform.answer.value +='/'">
+            <input type="button" value="0" onclick="cform.answer.value +='0'">
+            <input type="button" value="." onclick="cform.answer.value +='.'">
+            <input type="button" value="%" onclick="cform.answer.value +='9'">
+            <br><br>
+            <input type="button" value="clear"  id="clear"  onclick="cform.answer.value ='  '">
+            <input type="button" value="=" id="equal" onclick="cform.answer.value =eval(cform.answer.value)">
+        </form>
+    </div>
+</body>
+</html>
